@@ -6,8 +6,10 @@ public class Student_main {
         s=null;
      //  s.obj.getdata();
         Bike b=new Bike("honda",1000000,"black");
-       // s.hasA(b);
+
+       s.hasA(b);
         b.getData();
+
     }
 }
 class Bike{
@@ -21,8 +23,8 @@ class Bike{
     }
     void getData(){
         System.out.println("brand name:"+brand);
-        System.out.println("price"+price);
-        System.out.println("color"+color);
+        System.out.println("price:"+price);
+        System.out.println("color:"+color);
     }
 }
 class Student{
