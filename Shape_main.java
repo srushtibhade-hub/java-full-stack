@@ -10,13 +10,10 @@ public class Shape_main {
         System.out.println("Enter your choice\n1.Circle\n2.Triangle\n3.Square");
         int n=sc.nextInt();
         if(n==1){
-        System.out.println("Area of circle");
         disp(new Circle());}
         else if (n==2){
-        System.out.println("Area of triangle");
         disp(new Triangle1());}
         else if (n==3) {
-            System.out.println("Area of Square");
             disp(new Square());
         }
         else {
@@ -36,12 +33,12 @@ abstract class Shape{
 class Circle extends Shape{
 Scanner sc=new Scanner(System.in);
     void find_area() {
-        System.out.println("enter the radius");
+        System.out.println("Enter the radius");
         int r= sc.nextInt();
        area=3.14*r;
     }
     void disp_area() {
-        System.out.println(area);
+        System.out.println("Area of Circle is:"+area);
     }
 }
 
@@ -49,7 +46,7 @@ class Triangle1 extends Shape{
     Scanner sc=new Scanner(System.in);
     static  float half=0.5f;
     void find_area() {
-        System.out.println("enter base and height");
+        System.out.println("Enter base and height");
         int b= sc.nextInt();
         int h=sc.nextInt();
         area=half*b*h;
@@ -62,12 +59,10 @@ class Triangle1 extends Shape{
 class Square extends Shape{
     Scanner sc=new Scanner(System.in);
     void find_area() {
-        System.out.println("enter the area");
+        System.out.println("Enter the area");
         int a=sc.nextInt();
         area=a*a;
     }
-
-    @Override
     void disp_area() {
         System.out.println("Area of square is:"+area);
     }
