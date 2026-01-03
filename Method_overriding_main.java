@@ -17,7 +17,7 @@ class Parent2{
     }
 }
 class Child2 extends Parent2{
-    void disp(){
+     void disp(){
         System.out.println("child class");
     }
 }
