@@ -40,13 +40,14 @@ public class Kod_calsi_main {
     }
 }
 interface Cod_calsi{
+    public final static int s=4;
     abstract void add();
     abstract void sub();
     abstract void mul();
     abstract void div();
 
 }
-class Srushti implements Cod_calsi{
+class Srushti extends Object implements Cod_calsi{
 
     @Override
     public void add() {
