@@ -12,7 +12,7 @@ public class Method_hiding_main {
     }
 }
 class Parent3{
-  static   void disp(){
+  static void disp(){
         System.out.println("parent class");
     }
 }
