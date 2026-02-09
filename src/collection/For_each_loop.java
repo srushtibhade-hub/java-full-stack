@@ -1,0 +1,19 @@
+package collection;
+
+import java.util.ArrayList;
+
+public class For_each_loop {
+    static void main(String[] args) {
+        ArrayList a=new ArrayList();
+        a.add(10);
+        a.add(20);
+        a.add(30);
+        a.add(40);
+        a.add(50);
+        a.add(90);
+        a.add(100);
+        for(Object i:a){
+            System.out.println(i);
+        }
+    }
+}
