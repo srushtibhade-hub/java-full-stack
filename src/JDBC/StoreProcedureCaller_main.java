@@ -17,9 +17,9 @@ public class StoreProcedureCaller_main {
         Scanner sc = new Scanner(System.in);
         Connection con = null;
         CallableStatement cst = null;
-        ResultSet rs = null;
+     //   ResultSet rs = null;
 
-        String sql = "call new_procedure(?)";
+        String sql = "call data_insert(?,?,?)";
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -32,29 +32,24 @@ public class StoreProcedureCaller_main {
 
             System.out.println("Enter account number:");
             int account_num = sc.nextInt();
+            System.out.println("enter name");
+            String name = sc.next();
+            System.out.println("enter balance");
+            int balance = sc.nextInt();
 
             cst.setInt(1, account_num);
+            cst.setString(2, name);
+            cst.setInt(3, balance);
 
-            boolean result = cst.execute();
+             cst.execute();
 
-            if (result) {
-                rs = cst.getResultSet();
-                while (rs.next()) {
-                    System.out.println(
-                            rs.getInt(1) + " " +
-                                    rs.getString(2) + " " +
-                                    rs.getInt(3)
-                    );
-                }
-            } else {
-                System.out.println("Invalid Account Number");
-            }
+
 
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
             try {
-                rs.close();
+         //       rs.close();
                  cst.close();
                  con.close();
             } catch (Exception e) {
